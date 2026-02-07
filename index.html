@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Rose Day 🌹</title>
+<style>
+body{
+height:100vh;
+margin:0;
+background:linear-gradient(#ffd1dc,#ffe6f0);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+font-family:Arial, sans-serif;
+overflow:hidden;
+text-align:center;
+}
+h1{
+color:#b3003b;
+font-size:32px;
+animation:glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow{
+from{ text-shadow:0 0 5px #ff99aa,0 0 10px #ff4d6d; }
+to{ text-shadow:0 0 15px #ffccd5,0 0 30px #e6004c; }
+}
+p{color:#800020;font-size:18px;}
+button{
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+cursor:pointer;
+}
+.rose{
+position:fixed;
+top:-40px;
+font-size:26px;
+animation:fall linear infinite;
+}
+@keyframes fall{ to{transform:translateY(110vh);} }
+</style>
+</head>
+<body>
+
+<h1>✨ 🌹 Happy Rose Day Shiruu ji 🌹 ✨</h1>
+<p>✨ A small surprise just for you 🤍 ✨</p>
+
+<a href="page2.html"><button>Next ➡️</button></a>
+
+<script>
+for(let i=0;i<20;i++){
+let r=document.createElement("div");
+r.className="rose";
+r.innerHTML="🌹";
+r.style.left=Math.random()*100+"vw";
+r.style.animationDuration=3+Math.random()*5+"s";
+document.body.appendChild(r);
+}
+</script>
+
+</body>
+</html>
