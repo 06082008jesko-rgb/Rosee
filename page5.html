@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day ✨</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fff0f5;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+  }
+
+  h1 {
+    color: #c2185b;
+    font-size: 32px;
+    margin-top: 30px;
+    animation: glowText 2s infinite alternate;
+  }
+
+  p {
+    color: #880e4f;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 20px;
+  }
+
+  .rose-img {
+    width: 85%;
+    max-width: 320px;
+    height: auto; /* 🔒 no ratio change */
+    border-radius: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    animation: glow 2s infinite alternate;
+  }
+
+  .restart-btn {
+    margin: 25px auto 40px;
+    padding: 12px 30px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+
+  .restart-btn:hover {
+    background: #e91e63;
+  }
+
+  @keyframes glow {
+    from { box-shadow: 0 0 15px rgba(255,255,255,0.5); }
+    to { box-shadow: 0 0 35px rgba(255,255,255,0.9); }
+  }
+
+  @keyframes glowText {
+    from { text-shadow: 0 0 5px #fff; }
+    to { text-shadow: 0 0 20px #ff80ab; }
+  }
+
+  /* 🌸 White rose rain */
+  .petal {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: fall linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes fall {
+    to {
+      transform: translateY(110vh) rotate(360deg);
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<h1>✨ 🌹 Happy Rose Day 🌹 ✨</h1>
+
+<p>✨ Happy Rose day shiruu ji 🤍 ✨</p>
+
+<p>
+Yeh vaisai he banaya hai, gussa mat krna 😊<br>
+Ek rose he toh hai...<br>
+Ek fool ke tarff sai ek phool 🤍 ko phool 🌹 ✨
+</p>
+
+<p>
+✨ You like white rose more than red,<br>
+so this white rose is just for you 🤍🌼 ✨
+</p>
+
+<!-- 🌹 YOUR EXACT IMAGE -->
+<img src="white-rose.png" alt="White Rose" class="rose-img">
+
+<button class="restart-btn" onclick="location.href='index.html'">
+🔁 Restart ✨
+</button>
+
+<script>
+  // 🌸 white rose rain
+  setInterval(() => {
+    const petal = document.createElement("div");
+    petal.classList.add("petal");
+    petal.innerHTML = "🤍🌼";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.animationDuration = (3 + Math.random() * 3) + "s";
+    document.body.appendChild(petal);
+
+    setTimeout(() => {
+      petal.remove();
+    }, 6000);
+  }, 300);
+</script>
+
+</body>
+</html>
